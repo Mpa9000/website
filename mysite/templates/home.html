@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+
+        <link rel="shortcut icon" type="image/png" href="/static/icon.jpg">
+        <title>HOME</title>
+    </head>
+    <body class="home-body">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Mpa9000</a>
+            <ul class="nav nav-pills">
+                &nbsp;
+                &nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link active">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Paginas</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">HOME</a>
+                        <a class="dropdown-item" href="{% url 'pages' %}">Todas las páginas</a>
+                        <a class="dropdown-item" href="{% url 'contact' %}">Contacta conmigo</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Historias de internet</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'stories' %}">Historias</a>
+                        </div>
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://www.youtube.com/mpa9000" target="_blank">¡Mi canal de YouTube!</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/_marc_planas_/" target="_blank">¡Mi Instagram!</a>
+                        <a class="dropdown-item" href="https://twitter.com/mpa_9000" target="_blank">¡Mi cuenta de Twitter!</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/mpa9000/?eid=ARBt00mUdxakYatcN7V-IzlTZSB8N6m0hbu1toi55YLSdrkgpDwkLHh23Foef1p40wcJMeDQ4jRHKIh7" target="_blank">¡Mi cuenta de Facebook!</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contacta conmigo.</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Hola, {{request.user}}.</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Salir</a>
+                </li>
+            </ul>
+        </nav>
+        &nbsp;
+        <center>
+            <div class="images-div">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://www.youtube.com/mpa9000" target="_blank"><img src="/static/YT-capture.png" style="height:343px;"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.instagram.com/_marc_planas_/" target="_blank"><img src="/static/Intagram-capture.png" style="height:343px;" alt="..."></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://twitter.com/mpa_9000" target="_blank"><img src="/static/Twitter-capture.png" style="height:343px;" alt="..."></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.facebook.com/mpa9000/?eid=ARBt00mUdxakYatcN7V-IzlTZSB8N6m0hbu1toi55YLSdrkgpDwkLHh23Foef1p40wcJMeDQ4jRHKIh7" target="_blank"><img src="/static/FB-capture.png" style="height:343px;" alt="..."></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </center>
+        <table>
+            <tr>
+                <td class="my-info-td">
+                    <section class="my-info-section">
+                        <div class="col" style="">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="my-info-img" src="/static/presentation-me.jpg">
+                                    </td>
+                                    <td>
+                                        <section class="my-info-text-section">
+                                            <p class="my-info-p">Bienvenid@s a mi página
+                                                web, me llamo Marc, tengo 16 años y esta es la primera página web que
+                                                he programado. En este caso he usado django con Python. Espero que lo
+                                                paséis bien aquí. Os dejo un poco de info sobre la web y cosas que
+                                                hacer aquí.</p>
+                                        </section>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </td>
+                <td class="page-space-td">
+                    <img src="/static/black-img.jpg" class="info-line-img">
+                </td>
+                <td>
+                    <section class="page-info-section">
+                        <p class="page-info-p">Es una web donde podrás encontrar tanto
+                            información útil: tutoriales de programas de PC, datos interesantes sobre la informática,
+                            tecnología, etc... Como también anécdotas de internet y muchas otras cosas increíbles
+                            pensadas y diseñadas expresa y exclusivamente para esta web. La idea es generar una
+                            comunidad donde podáis venir a buscar información tanto de la web, como de otr@s usuarios
+                            en el chat.</p>
+                    </section>
+                </td>
+            </tr>
+        </table>
+        <section class="tab-list-section">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Información Útil</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Normas</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reportar</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <section class="tab-list-info-section">
+                        <center>
+                            <h1>Información útil de la web</h1>
+                        </center>
+                        <table>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                    <h4>¿Qué se puede hacer?</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="things-to-do-section">
+                                        <p class="things-to-do-p">En esta web puedes encontrar información
+                                            mayoritariamente de informática, tecnología, videojuegos y similares;
+                                            desde la staff de la misma web, os proporcionaremos mucha información
+                                            que intentaremos ir yendo actualizando periódicamente, aún así tenéis
+                                            un fórum para conocer gente, aprender de ella o enseñar a otra. Tendréis
+                                            listas con reviews de videojuegos, para l@s que seáis gamers, listas de
+                                            programas, tips i tutoriales de programación para aquell@s que os guste
+                                            programar, etc. En fin, esta web es un refugio tecnológico hecho con
+                                            mucho cariño para tod@s vosotr@s.</p>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                    <h4>¿Dónde puedo encontrar las páginas de interés?</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="int-pages-section">
+                                        <p class="int-pages-p">Al encabezado de cada página encontrareis
+                                            una opción desplegable donde encontrareis las páginas principales o de
+                                            mayor interés. Después dentro de la página inicial de cada tema
+                                            encontrareis todas las páginas relacionadas, de todas formas hay una
+                                            página donde podrás encontrar toda la web ordenada por temas
+                                            principales y subtemas, de forma que si buscas algo en concreto lo más
+                                            fácil es ir allí o preguntar por el fórum.</p>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section>
+                                        &nbsp;
+                                        <h4>Primeras páginas.</h4>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="first-pages-section">
+                                        <p class="first-pages-p">Podéis visitar estas páginas que creo que
+                                            pueden ser interesantes para vosotr@s:</p>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <center>
+                                        &nbsp;
+                                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                            <button type="button" class="btn btn-secondary" onclick="window.location.href='{% url 'pages' %}'">Todas las páginas</button>
+                                            <button type="button" class="btn btn-secondary">2</button>
+
+                                            <div class="btn-group" role="group">
+                                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Dropdown
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </center>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <section class="tab-list-info-section">
+                        <center>
+                            <h1>Normas</h1>
+                        </center>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h4>¿Cómo puedo hablar a la staff y de la staff?</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="things-to-do-section">
+                                        &nbsp;
+                                        <p class="things-to-do-p">Hay una lista larga y detallada de como te debes
+                                            dirigir hacia la staff. En mayor parte es muy importante suavizar el
+                                            vocabulario con la satff, palabrotas, expresiones ofensivas,...</p>
+                                        <p class="things-to-do-p">Lista de las normas hacia la staff:</p>
+                                        <ol>
+                                            <li>
+                                                <p class="things-to-do-p">Está estrictamente prohibido escribir en un
+                                                    correo, DM, tweet, etc; algún insulto hacia la staff.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">Solo se podrán escribir insultos en un correo,
+                                                    DM, tweet, etc; hacia la staff en caso de que se esté explicando un
+                                                    caso de faltas de respetos de ostros usuari@s. Solo en el caso de que
+                                                    se exponga dicha falta de respeto.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">No se pueden enviar expresiones ofensivas en
+                                                    correos electrónicos, DM, tweeter, etc; hacia la staff. Como no hay
+                                                    una lista para identificar lo que es o no una expresión ofensiva,
+                                                    recomendamos ser precavidos.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">Solo se podrán escribir frases ofensivas en un
+                                                    correo, DM, tweet, etc; hacia la staff en caso de que se esté
+                                                    explicando un caso de faltas de respetos de ostros usuari@s. Solo en
+                                                    el caso de que se exponga dicha falta de respeto.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">Está prohibido faltar el respeto a la staff
+                                                    en el fórum cuando se habla con otros usuari@s. Esto no quiere
+                                                    decir que no se puedan hacer críticas.</p>
+                                            </li>
+                                        </ol>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                    <h4>¿Cómo puedo hablar a otros usuari@s?</h4>
+                                </td>
+                            </tr>
+                            &nbsp;
+                            <tr>
+                                <td>
+                                    <section class="things-to-do-section">
+                                        <p class="things-to-do-p">La lista de las normas de como hablar a otros usuari@s
+                                            son las mismas que las de como se deba hablar a la staff. Quitando el hecho
+                                            de las redes sociales y correos electrónicos, lo cual solo afecta el fórum
+                                            de la web.</p>
+                                        <p class="things-to-do-p">Lista de normas hacia otros usuari@s:</p>
+                                        <ol>
+                                            <li>
+                                                <p class="things-to-do-p">Está estrictamente prohibido escribir en el
+                                                    fórum algún insulto hacia ostros usuari@s.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">No se pueden enviar expresiones ofensivas en
+                                                    el fórum hacia ostros usuari@s. Como no hay una lista para identificar
+                                                    lo que es o no una expresión ofensiva, recomendamos ser precavidos.</p>
+                                            </li>
+                                            <li>
+                                                <p class="things-to-do-p">Está prohibido faltar el respeto a ortos
+                                                    usuari@s en el fórum. Esto no quiere decir que no se puedan hacer
+                                                    críticas.</p>
+                                            </li>
+                                        </ol>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                    <h4>¿Cómo debo escribir en el fórum?</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   <section class="things-to-do-section">
+                                       <p class="things-to-do-p">El como se debe escribir en el fórum engloba la
+                                           en gran parte las normas ya mencionada, aun así lo expongo para que
+                                           no allá ningún tipo de duda.</p>
+                                       <p class="things-to-do-p">Lista del comportamiento en el fórum:</p>
+                                       <ol>
+                                           <li>
+                                               <p class="things-to-do-p">Está prohibido escribir en el fórum algún
+                                                   insulto hacia ostros usuari@s o la staff de la página web.</p>
+                                           </li>
+                                           <li>
+                                               <p class="things-to-do-p">No se pueden enviar expresiones ofensivas en el
+                                                   fórum hacia ostros usuari@s o la staff. Como no hay una lista para
+                                                   identificar lo que es o no una expresión ofensiva, recomendamos ser
+                                                   precavidos.</p>
+                                           </li>
+                                           <li>
+                                               <p class="things-to-do-p">Está prohibido faltar el respeto a ortos
+                                                   usuari@s y a la staff en el fórum. Esto no quiere decir que no se
+                                                   puedan hacer críticas.</p>
+                                           </li>
+                                       </ol>
+                                   </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                    <h4>¿Qué pasa si rompo las normas?</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="things-to-do-section">
+                                        <p class="things-to-do-p">En el caso de que rompas las normas te vanearé el
+                                            correo electrónico y tu nombre de usuario volverá a estar disponible para
+                                            otros usuarios.</p>
+                                    </section>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <section class="tab-list-info-section">
+                        <center>
+                            <h1>Reportes</h1>
+                        </center>
+                        <table>
+                            <tr>
+                                <td>
+                                    <section class="things-to-do-section">
+                                        <p class="things-to-do-p">Cualquier cosa que os suceda en la web es un buen
+                                            motivo para reportar, aun que pedimos que los reportes sean por usuari@s que
+                                            rompen las normas o fallos de la web. En el caso de romper las normas se
+                                            deben aportar pruebas, para una posterior revisión detenidamente y en el
+                                            caso de que haya un incumplimiento se penalice al usuari@ de la forma debida.
+                                            En el caso de que sea un fallo de la web se revisara y se intentara
+                                            solucionar.</p>
+                                    </section>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+        &nbsp;&nbsp;
+        <img src="/static/white-img.jpg" class="separate-page-img">
+        <section class="bottom-info">
+            &nbsp;
+            <section class="pages-links-section" style="">
+                <table>
+                    <tr>
+                        <td>
+                           <h5>Páginas:</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><a href="{% url 'register' %}">Register</a> (solo si no tienes una cuenta)</li>
+                                <li><a href="{% url 'singin' %}">Login</a> (solo si no has iniciado sesion)</li>
+                                <li><a href="{% url 'home' %}">HOME</a> (estas aquí)</li>
+                                <li><a href="{% url 'contact' %}">Contactar con la STAFF</a> (para contactar con nosotros)</li>
+                                <li><a href="{% url 'pages' %}">Todas las páginas</a></li>
+                                <li><a href="{% url 'stories' %}">Historias de internet</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                    crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

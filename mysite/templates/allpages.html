@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'allpages.css' %}">
+
+        <link rel="shortcut icon" type="image/png" href="/static/icon.jpg">
+        <title>Páginas</title>
+    </head>
+    <body class="home-body">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Mpa9000</a>
+            <ul class="nav nav-pills">
+                &nbsp;
+                &nbsp;&nbsp;
+                <a href="{% url 'home' %}" role="button" aria-haspopup="true">
+                    <li>
+                        <svg class="bi bi-house-fill" width="2.5em" height="2.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                        </svg>
+                    </li>
+                </a>
+                &nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link active">PÁGINAS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Paginas</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'home' %}">HOME</a>
+                        <a class="dropdown-item">Todas las páginas</a>
+                        <a class="dropdown-item" href="{% url 'contact' %}">Contacta conmigo</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Historias de internet</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'stories' %}">Historias</a>
+                        </div>
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://www.youtube.com/mpa9000" target="_blank">¡Mi canal de YouTube!</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/_marc_planas_/" target="_blank">¡Mi Instagram!</a>
+                        <a class="dropdown-item" href="https://twitter.com/mpa_9000" target="_blank">¡Mi cuenta de Twitter!</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/mpa9000/?eid=ARBt00mUdxakYatcN7V-IzlTZSB8N6m0hbu1toi55YLSdrkgpDwkLHh23Foef1p40wcJMeDQ4jRHKIh7" target="_blank">¡Mi cuenta de Facebook!</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contacta conmigo.</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Hola, {{request.user}}.</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Salir</a>
+                </li>
+            </ul>
+        </nav>
+        &nbsp;
+        <center>
+            <h1 class="page-title">Páginas</h1>
+        </center>
+            <section class="pages-section">
+                <table class="table">
+                    <tr>
+                        <td class="td-first-column">
+                            <ul>
+                                <li>
+                                    <a class="text-link-major" href="{% url 'entrar' %}">Entar</a><a class="text-link-major">:</a>
+                                    <ul>
+                                        <li><a class="text-link" href="{% url 'register' %}">Register</a></li>
+                                        <li><a class="text-link" href="{% url 'singin' %}">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="text-link-major" href="{% url 'stories' %}">Historias de interner</a><a class="text-link-major">:</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li><a class="text-link-major" href="{% url 'home' %}">HOME</a></li>
+                                <li><a class="text-link-major" href="{% url 'contact' %}">Contactar con la STAFF</a></li>
+								<li><a class="text-link-major" href="{% url 'pages' %}">Todas las páginas</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        &nbsp;&nbsp;
+        <img src="/static/white-img.jpg" class="separate-page-img">
+        <section class="bottom-info">
+            &nbsp;
+            <section class="pages-links-section" style="">
+                <table>
+                    <tr>
+                        <td>
+                           <h5>Páginas:</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><a href="{% url 'register' %}">Register</a> (solo si no tienes una cuenta)</li>
+                                <li><a href="{% url 'singin' %}">Login</a> (solo si no has iniciado sesion)</li>
+                                <li><a href="{% url 'home' %}">HOME</a></li>
+                                <li><a href="{% url 'contact' %}">Contactar con la STAFF</a> (para contactar con nosotros)</li>
+                                <li><a href="{% url 'pages' %}">Todas las páginas</a> (estas aquí)</li>
+                                <li><a href="{% url 'stories' %}">Historias de internet</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                    crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
